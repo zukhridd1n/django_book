@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %} Register {% endblock %}
+
+{% block content %}
+    <h3>Register Page</h3>
+    <form action="{% url 'book:register' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <p>Do you have already account? Than <a href="{% url 'book:login' %}">log in</a></p>
+        <button type="submit"> Register</button>
+    </form>
+
+
+{% endblock %}

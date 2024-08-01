@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+    {% include 'category.html' %}
+    <div class="row " style="display: flex; justify-content: center; text-align: center">
+
+        <img src="{{user.avatar.url }}" class="rounded-circle mb-3" style="width: 150px;"
+             alt="Avatar"/>
+
+        <h5 class="mb-2"><strong>{{ user.first_name }} {{ user.last_name }}</strong></h5>
+        <h6 class="mb-2"><strong>{{ user.email}}</strong></h6>
+        <p class="text-muted"> <span class="badge bg-primary">{{ user.username }}</span></p>
+        <a href="{% url 'book:update-profile' %}">Edit</a>
+
+    </div>
+
+
+
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %} My Books {% endblock %}
+{% block content %}
+    {% include 'category.html' %}
+
+    {% for shelf in shelves %}
+        <ul type="none">
+            <li>{{ shelf.name }}</li>
+            <ol>
+                {% for book in shelf.books.all %}
+                    <li> {{ book.title }}</li>
+                {% endfor %}
+            </ol>
+
+        </ul>
+    {% endfor %}
+{% endblock %}

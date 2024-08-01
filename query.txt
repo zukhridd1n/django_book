@@ -1,0 +1,35 @@
+## 1
+user = User.objects.get(id=1)
+bookshelf = user.bookshelves.get(name='Expensive Books')
+book = Book.objects.get(title='Quran')
+
+bookshelf.books.add(book)
+
+## 2
+author = Authors.object.get(id=2)
+book = Book.object.get(author=author)
+
+bookshelf.books.add(book)
+
+## 3
+
+shelf = Bookshelf.object.get(id=3)
+book = shelf.objects.get(id=1)
+
+Book.drop(book)
+
+## 4
+
+user = User.object.get(id=3)
+BlockedUsers.User.add(user)
+
+## 5
+
+author = Authors.object.get(id=2)
+book = author.Book.object.get(id=1)
+title = book.object.get(title="Harry")
+title = "Harry Potter"
+
+
+
+
